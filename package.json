@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run start:ui\" \"npm run start:api1\" \"npm run start:api2\" \"npm run start:api3\"",
+    "start:ui": "cd app-ui && npm install && npm start",
+    "start:api1": "cd api/task && npm install && npm run start:dev",
+    "start:api2": "cd api/task-management && npm install && npm run start:dev",
+    "start:api3": "cd api/user && npm install && npm run start:dev"
+
+  }
+  
+
+}
