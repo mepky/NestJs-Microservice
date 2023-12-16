@@ -71,6 +71,7 @@ React.useEffect(()=>{
       getAllUsers()
   }
 })
+console.log("selectionModel ",selectionModel)
 
   const history = useNavigate(); // Initialize history for navigation
 
@@ -94,7 +95,7 @@ React.useEffect(()=>{
         pageSize={5}
         rowsPerPageOptions={[5, 10, 20]}
         checkboxSelection
-        getRowId={(row)=>row.email}
+        getRowId={(row)=>row.id}
         onRowSelectionModelChange={(ids) => {handleSelection(ids)}}
 
       />
