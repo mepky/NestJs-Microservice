@@ -1,14 +1,15 @@
 # NestJs-Microservice
 
 ## Directory Structure
--Root:
-    -api:
-        - Task-Management-API-Gateway
-        - User Microservice
-        -Task Microservice
-    -ui:
-      - React
-    
+
+## Root
+- api
+  - Task-Management-API-Gateway
+  - User Microservice
+  - Task Microservice
+- ui
+  - React
+
 
 
 ### Install NestJs
