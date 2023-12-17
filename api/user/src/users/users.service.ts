@@ -11,6 +11,10 @@ export class UsersService {
     @InjectRepository(User)
     private readonly userRepository: Repository<User | any>,
   ) {}
+
+  getHello(): string {
+    return 'Hello';
+  }
   async create(createUserDto: CreateUserDto): Promise<User> {
     const existingUser = await this.userRepository.findOne({
       where: { email: createUserDto.email.toLowerCase() },

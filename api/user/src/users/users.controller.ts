@@ -8,7 +8,7 @@ import {
   Query,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
-import { EventPattern, MessagePattern } from '@nestjs/microservices';
+import { MessagePattern } from '@nestjs/microservices';
 import { DeleteUsersDto } from './dto/delete-user.dto';
 import { CreateUserDto } from './dto/create-user.dto';
 // import { UpdateUserDto } from './dto/update-user.dto';
@@ -67,28 +67,9 @@ export class UsersController {
   remove(id: number) {
     return this.usersService.remove(id);
   }
-  // @Get('login')
-  // findUserBymail(@Query('email') email: string) {
-  //   return this.usersService.findUserByEmail(email);
-  // }
 
-  // @Get('currentUser')
-  // findUserByEmail(@Query('email') email: string) {
-  //   return this.usersService.findUserByEmail(email);
-  // }
-
-  // @Get(':id')
-  // findOne(@Param('id') id: number) {
-  //   return this.usersService.findOne(id);
-  // }
-
-  // @Patch(':id')
-  // update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-  //   return this.usersService.update(+id, updateUserDto);
-  // }
-
-  // @Delete(':id')
-  // remove(@Param('id') id: number) {
-  //   return this.usersService.remove(id);
-  // }
+  @Get('Hello')
+  getHello(): string {
+    return this.usersService.getHello();
+  }
 }
